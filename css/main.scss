@@ -1,0 +1,53 @@
+// variables
+// device widths (these are generalised)
+$device-phone: 480px; // portrait 320px
+$device-phablet: 540px; // landscape: 610px
+$device-tablet: 700px; // 768px;
+$device-laptop: 960px; // 900+
+$device-large: 1200px; // 1200px+
+
+$fave-color: purple;
+$fave-font: 'Open Sans', 'Arial', sans-serif;
+
+body {
+	font-family: $fave-font;
+	color: $fave-color;
+	font-size: 16px;
+}
+
+.device-phone {
+	font-size: 1rem;
+	border: 1px solid purple;
+	display: none;
+	visibility: hidden;
+	 }
+//
+//.device-phablet {
+//	font-size: 1rem;
+//	border: 1px dashed blue;
+//	 }
+//
+//.device-tablet {
+//	font-size: 1rem;
+//	border: 1px solid orange;
+//	 }
+//
+//.device-laptop {
+//	font-size: 1rem;
+//	border: 1px dashed red;
+//	}
+//
+//.device-large {
+//	font-size: 1rem;
+//	border: 1px solid magenta;
+//	 }
+
+
+//====media queries=====
+@media (min-width: $device-phone) {
+	// do stuff to our styles
+	.device-phone {
+		display: block;
+		visibility: visible;
+	}
+}

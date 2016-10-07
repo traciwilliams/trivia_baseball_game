@@ -1,0 +1,17 @@
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: purple;
+  font-size: 16px; }
+
+.device-phone {
+  font-size: 1rem;
+  border: 1px solid purple;
+  display: none;
+  visibility: hidden; }
+
+@media (min-width: 480px) {
+  .device-phone {
+    display: block;
+    visibility: visible; } }
+
+/*# sourceMappingURL=main.css.map */
