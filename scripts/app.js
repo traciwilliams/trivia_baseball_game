@@ -3,13 +3,14 @@
 
 
 //==============GETTING QUESTION==================
+//might have to change this if I can't find an API and make my own array of questions
+//
+// startButton = document.getElementById("beginGame");
+// startButton.onclick = function getQuestion() {
 
+window.onload = getQuestion();
 
-startButton = document.getElementById("beginGame");
-
-
-
-startButton.onclick = function getQuestion() {
+function getQuestion() {
 
     $.ajax({
             url: 'http://www.omdbapi.com/?t=k-pax&y=&plot=short&r=json', //need to find a baseball API
@@ -39,3 +40,27 @@ startButton.onclick = function getQuestion() {
             }
         })
     }
+
+//==============TIMER==========
+//not finished...what happens when you get to one?
+
+var count = 60;
+var counter= setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer(){
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     return;
+  }
+  document.getElementById("timer").textContent = count + " secs";
+};
+
+
+
+
+/*have to figure out the questions, then make an if else statement on them...and then use the timer
+and the scoreboard depending on the choice user makes..then figure out how to end the game and restart it
+ */
+
