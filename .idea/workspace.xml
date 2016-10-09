@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f14a76af-5af9-4c37-b705-35858db4abfe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/.sass-cache/61622c93e1c80bfadfe5c75e75a96ad0b67201f1/main.scssc" afterPath="$PROJECT_DIR$/css/.sass-cache/61622c93e1c80bfadfe5c75e75a96ad0b67201f1/main.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css.map" afterPath="$PROJECT_DIR$/css/main.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.scss" afterPath="$PROJECT_DIR$/css/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intro.html" afterPath="$PROJECT_DIR$/intro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app.js" afterPath="$PROJECT_DIR$/scripts/app.js" />
     </list>
     <ignored path="trivia_baseball_game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="307">
@@ -64,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            <state relative-caret-position="75">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -84,8 +77,8 @@
       <list>
         <option value="$PROJECT_DIR$/intro.html" />
         <option value="$PROJECT_DIR$/scripts/app.js" />
-        <option value="$PROJECT_DIR$/css/main.scss" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/main.scss" />
       </list>
     </option>
   </component>
@@ -198,12 +191,12 @@
       <workItem from="1475944189587" duration="549000" />
       <workItem from="1475956634449" duration="375000" />
       <workItem from="1475963314576" duration="7367000" />
-      <workItem from="1475980337815" duration="6071000" />
+      <workItem from="1475980337815" duration="6199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14943000" />
+    <option name="totallyTimeSpent" value="15071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -259,6 +252,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/intro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -269,26 +278,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+        <state relative-caret-position="75">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding />
         </state>
       </provider>
