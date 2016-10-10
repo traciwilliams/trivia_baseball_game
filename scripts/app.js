@@ -1,29 +1,29 @@
-
-var question = {};
-    question.one = 'What was the score of the October 1, 1961 game in which Roger Maris hit his record-breaking 61st home run, breaking Babe Ruth’s 34-year-old single-season record?'
-    question.two = 'How many intentional walks did Roger Maris get in his 61 home run season?'
-    question.three = 'Name the first player born in the 1990s to appear in a major league game.'
-    question.four = 'Name the first AL expansion team to accomplish each of the following: First Division Title (1976), First League Pennant (1980), and World Series Champion (1985)'
-    question.five =  'Name the pitcher with the best won-lost percentage of any hurler with at least with 15 wins against the New York Yankees.'
-
-
-var answer = {};
-    answer.one = 'Yankees 1 … Red Sox 0';
-    answer.two = 'Zero';
-    answer.three = 'Cubs’ shortstop Starlin Castro';
-    answer.four = 'Kansas City Royals';
-    answer.five = 'Babe Ruth';
-
-window.onload = getQuestion();
-
-    function getQuestion (){
-
-
-        var questionDisplay = document.getElementById('question');
-        questionDisplay.textContent = (question.one);//change this one you figure out how the object displays information
-
-        var questionDisplay = document.getElementById('buttonNumberOne');
-        questionDisplay.textContent = (answer.one);
+//
+// var question = {};
+//     question.one = 'What was the score of the October 1, 1961 game in which Roger Maris hit his record-breaking 61st home run, breaking Babe Ruth’s 34-year-old single-season record?'
+//     question.two = 'How many intentional walks did Roger Maris get in his 61 home run season?'
+//     question.three = 'Name the first player born in the 1990s to appear in a major league game.'
+//     question.four = 'Name the first AL expansion team to accomplish each of the following: First Division Title (1976), First League Pennant (1980), and World Series Champion (1985)'
+//     question.five =  'Name the pitcher with the best won-lost percentage of any hurler with at least with 15 wins against the New York Yankees.'
+//
+//
+// var answer = {};
+//     answer.one = 'Yankees 1 … Red Sox 0';
+//     answer.two = 'Zero';
+//     answer.three = 'Cubs’ shortstop Starlin Castro';
+//     answer.four = 'Kansas City Royals';
+//     answer.five = 'Babe Ruth';
+//
+// window.onload = getQuestion();
+//
+//     function getQuestion (){
+//
+//
+//         var questionDisplay = document.getElementById('question');
+//         questionDisplay.textContent = (question.one);//change this one you figure out how the object displays information
+//
+//         var questionDisplay = document.getElementById('buttonNumberOne');
+//         questionDisplay.textContent = (answer.one);
 
         // var questionDisplay = document.getElementById('buttonNumberTwo');
         // questionDisplay.textContent = (data.Title);
@@ -33,44 +33,53 @@ window.onload = getQuestion();
         //
         // var questionDisplay = document.getElementById('buttonNumberFour');
         // questionDisplay.textContent = (data.Title);
-    }
+//    }
 
 
 
 
 //============QUIZ CONSTRUCTOR=========
-
-function Question(question, answer) {
-    this.question = question;
-    this.answer = answer;
-
-}
-var firstQuestion = new Question ("What is baseball?", "a game");
-
-
-
-
-
- function Question(question, answer, choice1, choice2, choice3) {
-     this.question = question;
-     this.answer = answer;
-     this.choice1 = choice1;
-     this.choice2 = choice2;
-     this.choice3 = choice3;
-
- }
- var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton, PHI", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez");
-
-
- console.log(firstQuestion.question, firstQuestion.answer, firstQuestion.choice1, firstQuestion.choice2, firstQuestion.choice3)
+//
+// function Question(question, answer) {
+//     this.question = question;
+//     this.answer = answer;
+//
+// }
+// var firstQuestion = new Question ("What is baseball?", "a game");
+//
 
 
 
 
+window.onload = Question();
 
 
+     function Question(question, answer, choice1, choice2, choice3, choice4) {
+         this.question = question;
+         this.answer = answer;
+         this.choice2 = choice2;
+         this.choice3 = choice3;
+         this.choice4 = choice4;
 
-var getQuestion = new Question();
+     }
+     var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton, PHI", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez", "Ryne Sandburg");
+
+        question = document.getElementById('question');
+        question.textContent = (firstQuestion.question);
+
+        answer = document.getElementById('choiceOne');
+        answer.textContent = (firstQuestion.answer);
+
+        choice2 = document.getElementById('choiceTwo');
+        choice2.textContent = (firstQuestion.choice2);
+
+        choice3 = document.getElementById('choiceThree');
+        choice3.textContent = (firstQuestion.choice3);
+
+        choice4 = document.getElementById('choiceFour');
+        choice4.textContent = (firstQuestion.choice4);
+
+
 
 //==============SUBMIT BUTTON and Calculation for Scoreboard ===========
 
