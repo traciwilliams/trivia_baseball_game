@@ -40,11 +40,68 @@ window.onload = getQuestion();
 
 //============QUIZ CONSTRUCTOR=========
 
-function quizConstructor(question, answer) {
+function Question(question, answer) {
     this.question = question;
     this.answer = answer;
 
 }
+var firstQuestion = new Question ("What is baseball?", "a game");
+
+
+
+
+
+ function Question(question, answer, choice1, choice2, choice3) {
+     this.question = question;
+     this.answer = answer;
+     this.choice1 = choice1;
+     this.choice2 = choice2;
+     this.choice3 = choice3;
+
+ }
+ var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton, PHI", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez");
+
+
+ console.log(firstQuestion.question, firstQuestion.answer, firstQuestion.choice1, firstQuestion.choice2, firstQuestion.choice3)
+
+
+
+
+
+
+
+var getQuestion = new Question();
+
+//==============SUBMIT BUTTON and Calculation for Scoreboard ===========
+
+
+submitButton = document.getElementById("submitAns");
+submitButton.onclick = function ifCorrect(){
+    //alert("are you working?")
+
+
+
+}
+
+
+
+//==============TIMER==========
+//not finished...what happens when you get to one?
+
+var count = 60;
+var counter= setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer(){
+    count=count-1;
+    if (count <= 0)
+    {
+        clearInterval(counter);
+        return;
+    }
+    document.getElementById("timer").textContent = count + " secs";
+};
+
+
 
 
 
@@ -89,26 +146,5 @@ function quizConstructor(question, answer) {
 //         })
 //     }
 
-//==============TIMER==========
-//not finished...what happens when you get to one?
 
-var count = 60;
-var counter= setInterval(timer, 1000); //1000 will  run it every 1 second
-
-function timer(){
-  count=count-1;
-  if (count <= 0)
-  {
-     clearInterval(counter);
-     return;
-  }
-  document.getElementById("timer").textContent = count + " secs";
-};
-
-
-
-
-/*have to figure out the questions, then make an if else statement on them...and then use the timer
-and the scoreboard depending on the choice user makes..then figure out how to end the game and restart it
- */
 
