@@ -1,0 +1,95 @@
+// var questionArray = [
+//     "1. Who was the last pitcher before Travis Wood to hit a home run in the postseason?",
+//     "2. The last player before Javier Baez to homer in a 1-0 postseason game is playing in the ALDS this year, but not for the same team. Who is it?",
+//     "3. Jose Bautista's 6th postseason HR tied him for the all-time Blue Jays lead. Whose mark did he equal?",
+//     "4. Madison Bumgarner threw his third career postseason shutout last night. Who holds the all-time record with four?",
+//     "5. Who recorded the first hit in the first Wild Card Game in MLB history in 2012?",
+//     "6. Which two players are tied for the Major League record for most career home runs in the 162nd game of seasons?"
+// ];
+//
+// var answerArray = [
+//     "1. Joe Blanton, PHI",
+//     "2. Boston's Mike Napoli",
+//     "3. Joe Carter",
+//     "4. Christy Mathewson",
+//     "5. David Ross, ATL",
+//     "6. Dick Allen and Evan Longoria"
+];
+
+// for (i = 0; i < questionArray.length; i++) {
+//     var questions = questionArray[i];
+//     console.log(questions);
+// }
+//
+// for (i = 0; i < answerArray.length; i++) {
+//     var answers = answerArray[i];
+//     console.log(answers);
+// }
+
+
+// var questDiv = document.getElementById("questContainer");
+// var ansDiv = document.getElementById("ansContainer");
+//
+//
+// for (i = 0; i < questionArray.length; i++) {
+//     var newDiv = document.createElement("div");
+//     newDiv.textContent = (questionArray[i]);
+//     questDiv.appendChild(newDiv);
+//
+//     var newDiv2 = document.createElement("li");
+//     newDiv2.textContent = (answerArray[i]);
+//     ansDiv.appendChild(newDiv2);
+// }
+
+
+
+
+
+this works===============================
+
+function question1 (question, answer){
+    var newQuestion = document.createElement("header");
+    newQuestion.textContent = (question);
+    var questDiv = document.getElementById("questContainer");
+    questDiv.appendChild(newQuestion);
+
+
+    var theAnswer = document.createElement("header");
+    theAnswer.textContent = (answer);
+    var ansDiv = document.getElementById("ansContainer");
+    ansDiv.appendChild(theAnswer);
+
+
+}
+question1("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton")
+
+^^^^^=====================================
+
+
+
+
+
+
+
+
+var newDiv = document.createElement("div");
+//     newDiv.textContent = (questionArray[i]);
+//     questDiv.appendChild(newDiv);
+
+function by james
+
+function buildAnswerOption(text, isAnswer) {
+    var isAnswerCorrect = isAnswer; // boolean
+    var answerText = text;
+
+    var el = document.createElement('div');//
+    var label = document.createElement('label');
+    var checkbox = document.createElement('input');
+    el.appendChild(label);
+    el.appendChild(checkbox);
+    checkbox.checked = isAnswerCorrect;
+    label.innerText = answerText;
+
+    return el;
+}
+

@@ -1,117 +1,243 @@
+
+//===============FUNCTION QUESTION1 =====================================
+//puts question and answer on the page, no options
 //
-// var question = {};
-//     question.one = 'What was the score of the October 1, 1961 game in which Roger Maris hit his record-breaking 61st home run, breaking Babe Ruth’s 34-year-old single-season record?'
-//     question.two = 'How many intentional walks did Roger Maris get in his 61 home run season?'
-//     question.three = 'Name the first player born in the 1990s to appear in a major league game.'
-//     question.four = 'Name the first AL expansion team to accomplish each of the following: First Division Title (1976), First League Pennant (1980), and World Series Champion (1985)'
-//     question.five =  'Name the pitcher with the best won-lost percentage of any hurler with at least with 15 wins against the New York Yankees.'
-//
-//
-// var answer = {};
-//     answer.one = 'Yankees 1 … Red Sox 0';
-//     answer.two = 'Zero';
-//     answer.three = 'Cubs’ shortstop Starlin Castro';
-//     answer.four = 'Kansas City Royals';
-//     answer.five = 'Babe Ruth';
-//
-// window.onload = getQuestion();
-//
-//     function getQuestion (){
+// function question1 (question, answer){
+//     var newQuestion = document.createElement("header");
+//     newQuestion.textContent = (question);
+//     var questDiv = document.getElementById("questContainer");
+//     questDiv.appendChild(newQuestion);
 //
 //
-//         var questionDisplay = document.getElementById('question');
-//         questionDisplay.textContent = (question.one);//change this one you figure out how the object displays information
+//     var theAnswer = document.createElement("header");
+//     theAnswer.textContent = (answer);
+//     var ansDiv = document.getElementById("ansContainer");
+//     ansDiv.appendChild(theAnswer);
 //
-//         var questionDisplay = document.getElementById('buttonNumberOne');
-//         questionDisplay.textContent = (answer.one);
+//
+// }
+// question1("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton")
 
-        // var questionDisplay = document.getElementById('buttonNumberTwo');
-        // questionDisplay.textContent = (data.Title);
-        //
-        // var questionDisplay = document.getElementById('buttonNumberThree');
-        // questionDisplay.textContent = (data.Year);
-        //
-        // var questionDisplay = document.getElementById('buttonNumberFour');
-        // questionDisplay.textContent = (data.Title);
-//    }
+//============^^^^^^^FUNCTION QUESTION1 ^^^^^^^^=====================================
+//
+//
+// var questDiv = document.getElementById("questContainer");
+//
+// function Question(questionText, questionAnswerArr) {
+//     //var newHeader = document.createElement("h1");
+//     var newDiv = document.createElement("h1");
+//     //newDiv.textContent = (questionArray[i]);
+//     questDiv.appendChild(newDiv);
+//
+// }
+    // 1. build header w/question text
+    // 2. build options by doing above:
+    // loop through and randomize answers
 
-//TODOS
-//have to figure out how the constructor works and how to advance question
-//need a score function for runs and outs
-//reset timer
+//     // buildAnswerOption() for each
+//     // append all to DOM
+//     this.removeEl = function() {
+//         // remove this el from dom
+//     }
+//     this.render = function() {
+//         // append all this to the dom
+//     }
+// }
+//===========QUIZ FUNCTION=============
+//put references to the function in array
+//cycle through the array and use math.random
+//this isn't working
 
 
 
-//============QUIZ CONSTRUCTOR=========
+// var questionFuncArray = [
+//     question1,
+//     question2,
+//     question3,
+//     question4,
+//     question5
+// ]
+//
+// var randomNumber = questionFuncArray[Math.floor(questionFuncArray.length * Math.random())];
+// question = question[randomNumber];
+//
+// function Question (question, answer){
+//     var newQuestion = document.createElement("header");
+//     newQuestion.textContent = (question);
+//     var questDiv = document.getElementById("questContainer");
+//     questDiv.appendChild(newQuestion);
 
-window.onload = Question();
+    // var theAnswer = document.createElement("header");
+    // theAnswer.textContent = (answer);
+    // var ansDiv = document.getElementById("ansContainer");
+    // ansDiv.appendChild(theAnswer);
+
+//     var theAnswer = document.createElement("div");
+//     var label = document.createElement("label");
+//     var checkbox = document.createElement("input");
+//     theAnswer.appendChild(label);
+//     theAnswer.appendChild(checkbox);
+//     checkbox.checked = theAnswer;
+//
+//     theAnswer.textContent = (answer);
+//     var ansDiv = document.getElementById("ansContainer");
+//     ansDiv.appendChild(theAnswer);
+//
+// }
+// question2("Who was the last player before Javier Baez to homer in a 1-0 postseason game?", "Boston's Mike Napoli")
+// question3("Which two players are tied for the Major League record for most career home runs in the 162nd game of seasons?", "Dick Allen and Evan Longoria")
+// question4("Who holds the Braves' hit streak record?", "Dan Uggla (33 games, 2011)")
+// question5("Who was the last player to reach 1,000 career hits in a Giants uniform before Buster Posey?", "Rich Aurilia (2003)")
+//===================^^^^^^^^QUIZ FUNCTION^^^^^^^^^^======================================
+
+//=================BUILD ANSWER OPTION FUNCTION by JAMES======================
+//function takes 2 arguments
+//see console output below
+
+//
+// function buildAnswerOption(text, isAnswer) {
+//     var isAnswerCorrect = isAnswer; // boolean
+//     var answerText = text;
+//
+//     var el = document.createElement('div');//
+//     var label = document.createElement('label');
+//     var checkbox = document.createElement('input');
+//     el.appendChild(label);
+//     el.appendChild(checkbox);
+//     checkbox.checked = isAnswerCorrect;
+//     label.innerText = answerText;
+//
+//     return el;
+// }
+
+//console output
+// buildAnswerOption("Micky Mantel", "Joe Blanton")
+// <div>​<label>​Micky Mantel​</label>​<input>​</div>​
+//
+
+//=================^^^^^^^BUILD ANSWER OPTION FUNCTION^^^^^^^^^======================
 
 
-     function Question(question, answer, choice2, choice3, choice4) {
-         this.question = question;
-         this.answer = answer;
-         this.choice2 = choice2;
-         this.choice3 = choice3;
-         this.choice4 = choice4;
+//=================BUILD ANSWER OPTION FUNCTION 2 by Traci======================
+//function takes 4 arguments
+//assigns an id to the answer argument
+//see console output below
+
+
+// function buildAnswerOption(option, answer, option, option) {
+//     var isAnswerCorrect = answer;
+//     var optionText = option;
+//
+//     var questDiv = document.getElementById("questContainer");
+//
+//     var el = document.createElement("div");
+//     var label = document.createElement("label");
+//     var checkbox = document.createElement("input");
+//     label.id = "answer";
+//
+//     el.appendChild(label);
+//     el.appendChild(checkbox);
+//
+//     checkbox.checked = isAnswerCorrect;
+//
+//     label.innerText = answer;
+//     return el;
+// }
+//
+//
+// var questDiv = document.getElementById("questContainer");
+//
+// //=====console output====================
+// buildAnswerOption("Mickey Mantel", "Joe Blanton", "Ryne Sandburg", "Tim Gould")
+//
+// <div>
+//     <label id="answer">
+//     <input>
+// </div>
+
+//============^^^^^^^^^^BUILD ANSWER OPTION FUNCTION 2 by Traci^^^^^^^^===========================
 
 
 
-     }
-     var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez", "Ryne Sandburg");
 
-        question = document.getElementById('question');
-        question.textContent = (firstQuestion.question);
 
-        answer = document.getElementById('answer');
-        answer.textContent = (firstQuestion.answer);
 
-        choice2 = document.getElementById('choiceTwo');
-        choice2.textContent = (firstQuestion.choice2);
 
-        choice3 = document.getElementById('choiceThree');
-        choice3.textContent = (firstQuestion.choice3);
-
-        choice4 = document.getElementById('choiceFour');
-        choice4.textContent = (firstQuestion.choice4);
-
+//======================QUIZ CONSTRUCTOR========================
+//this is populates the question, answer and three choices on the webpage
+//however the answer is always in the same place
+//
+// Question();
+//      function Question(question, answer, choice2, choice3, choice4) {
+//          this.question = question;
+//          this.answer = answer;
+//          this.choice2 = choice2;
+//          this.choice3 = choice3;
+//          this.choice4 = choice4;
+//      }
+//
+//      var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez", "Ryne Sandburg");
+//
+//         question = document.getElementById('question');
+//         question.textContent = (firstQuestion.question);
+//
+//         answer = document.getElementById('answer');
+//         answer.textContent = (firstQuestion.answer);
+//
+//         choice2 = document.getElementById('choiceTwo');
+//         choice2.textContent = (firstQuestion.choice2);
+//
+//         choice3 = document.getElementById('choiceThree');
+//         choice3.textContent = (firstQuestion.choice3);
+//
+//         choice4 = document.getElementById('choiceFour');
+//         choice4.textContent = (firstQuestion.choice4);
+//======================^^^^^^^QUIZ CONSTRUCTOR^^^^^^^^^========================
 
 
 //==============SUBMIT BUTTON and Calculation for Scoreboard ===========
-//this is not working...comeback to this
-
-        runs = 0;
-        outs = 0;
-
-
-        submitButton = document.getElementById("submitAns");
-
-        submitButton.onclick = function ifCorrect(){
-            console.log('are you working? why yes I am!')
-            var correctAnswer = document.getElementById('answer');
-            console.log(correctAnswer)
+//when the user clicks on the submit button
+//if the answer is correct then it's one run
+//if the answer is incorrect it's one out
+//the button is working
+//the calculation is not working
 
 
-            if (correctAnswer.checked === true) {
-                alert('You are correct!')
-                runs = document.getElementById("runs").value;
-                runs += 1;
+        // runs = document.getElementById("runs")
+        // outs = document.getElementById("outs")
+        //
+        // runs = 0;
+        // outs = 0;
+        //
+        //
+        // submitButton = document.getElementById("submitAns");
+        //
+        // submitButton.onclick = function ifCorrect(){
+        //     console.log('are you working? why yes I am!')
+        //     var correctAnswer = document.getElementById('answer');
+        //     console.log(correctAnswer)
+        //
+        //
+        //     if (correctAnswer.checked === true) {
+        //         alert('You are correct!')
+        //         runs = runs.value;
+        //         runs += 1;
+        //
+        //
+        //     } else {
+        //         alert('you are wrong')
+        //         outs = outs.value;
+        //         outs += 1;
+        //     }
+        // };
+//==============^^^^^^^^SUBMIT BUTTON and Calculation for Scoreboard^^^^^^^=================
 
-
-            } else {
-                alert('you are wrong')
-                outs = document.getElementById("outs").value;
-                outs += 1;
-            }
-        };
-
-
-
-
-//==============TIMER==========
-
+//=================================TIMER=======================================
+//This time is a countdown from 10 to 0
+//will need to be reset once a new question is populated
 
 var count = 10;
-var counter= setInterval(timer, 1000); //1000 will  run it every 1 second
+var counter= setInterval(timer, 1000);
 
 function timer(){
     count=count-1;
@@ -121,68 +247,8 @@ function timer(){
     document.getElementById("timer").textContent = count;
 };
 
-
-//===============RESET TIMER ===========
-//why do I need this? Come back to this
-// function resetTimer(){
-//     clearInterval(timer)
-//     timer = function timer(){
-//         count=count-1;
-//         if (count < 0) {
-//             return;
-//             }
-//         }
-// };
-//
-// resetTimer()
-resetButton = document.getElementById("resetButton");
-
-
-resetButton.click(function () {
-    clearTimer(timer);
-});
+//==============================^^^^^^^^^^TIMER^^^^^^^=======================================
 
 
 
-
-//==============GETTING QUESTIONS USING AN API==================
-//might have to change this if I can't find an API and make my own array of questions
-//
-// startButton = document.getElementById("beginGame");
-// startButton.onclick = function getQuestion() {
-//
-// window.onload = getQuestion();
-//
-// function getQuestion() {
-//
-//     $.ajax({
-//             url: 'http://www.omdbapi.com/?t=k-pax&y=&plot=short&r=json', //need to find a baseball API
-//             type: 'Get',
-//             dataType: 'json',
-//             success: function (data) {
-//                 var questionDisplay = document.getElementById('question');
-//                 questionDisplay.textContent = (data.Plot);//change this one you figure out how the object displays information
-//
-//                 //look at these...I think they need to be changed
-//                 //also would like a "pause" before these show up
-//                 var questionDisplay = document.getElementById('buttonNumberOne');
-//                 questionDisplay.textContent = (data.Year);
-//
-//                 var questionDisplay = document.getElementById('buttonNumberTwo');
-//                 questionDisplay.textContent = (data.Title);
-//
-//                 var questionDisplay = document.getElementById('buttonNumberThree');
-//                 questionDisplay.textContent = (data.Year);
-//
-//                 var questionDisplay = document.getElementById('buttonNumberFour');
-//                 questionDisplay.textContent = (data.Title);
-//
-//             },
-//             error: function (err) {
-//                 console.log(err)
-//             }
-//         })
-//     }
-
-
-
+//window.onload = function(event) {}
