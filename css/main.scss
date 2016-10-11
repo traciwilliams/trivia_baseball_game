@@ -43,7 +43,7 @@ $device-phone: 480px;
 
 #timer {
 	float: right;
-	background-color: orange;
+	background-color: white;
 	padding: 5px 5px 5px 5px;
 
 }
@@ -83,7 +83,9 @@ $device-phone: 480px;
 	//right:1160px;
 }
 
-
+#scoreboard {
+	background-color: white;
+}
 //====media queries=====
 @media (min-width: $device-phone) {
 	// do stuff to our styles

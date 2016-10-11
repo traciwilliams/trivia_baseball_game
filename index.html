@@ -46,24 +46,28 @@
         <section id="question">
         </section>
 
-        <section><div id="scoreboard">Score<br>0 </div>
-        </section>
-        <br>
-        <section><div id="timer">and...Go!</div></section>
 
+      <!--SCOREBOARD and TIMER-->
+        <table style="width:10%" id="scoreboard">
+            <tr><td>Runs</td></tr>
+            <tr><td id="runs"></td></tr>
+            <tr><td>Outs</td></tr>
+            <tr><td id="outs"></td></tr>
+            <tr><td id="timer">Go!</td></tr>
+        </table>
 
             <table style="width:100%">
                 <tr>
-                    <td><input type = "radio" name="baseball" /><labeL id="choiceOne"></labeL></td>
+                    <td><input type = "radio" name="baseball" value="radio"/><label id="answer"></label></td>
                 </tr>
                 <tr>
-                    <td><input type = "radio" name="baseball"/><labeL id="choiceTwo"></labeL></td>
+                    <td><input type = "radio" name="baseball" value="radio"/><label id="choiceTwo"></label></td>
                 </tr>
                 <tr>
-                    <td><input type = "radio" name="baseball"/><labeL id="choiceThree"></labeL></td>
+                    <td><input type = "radio" name="baseball" value="radio"/><label id="choiceThree"></label></td>
                 </tr>
                 <tr>
-                    <td><input type = "radio" name="baseball"/><labeL id="choiceFour"></labeL></td>
+                    <td><input type = "radio" name="baseball" value="radio"/><label id="choiceFour"></label></td>
                 </tr>
             </table>
 
@@ -80,11 +84,17 @@
          <section>
                 <button id="submitAns">Submit</button>
         </section>
-     <!--   IMAGE-->
-        <section id="ballField">
-        <!--<div id="baseball"><img src="images/baseball_small.png" height="50" width="50"/></div>-->
-        <div id="baseball">ball</div>
-        </section>
+
+     <!--TESTING BUTTON -->
+            <section>
+                <button id="resetButton">ResetButton</button>
+            </section>
+
+     <!--   BASEBALL IMAGE-->
+        <!--<section id="ballField">-->
+        <!--&lt;!&ndash;<div id="baseball"><img src="images/baseball_small.png" height="50" width="50"/></div>&ndash;&gt;-->
+        <!--<div id="baseball">ball</div>-->
+        <!--</section>-->
 
       </div>
     </div>
