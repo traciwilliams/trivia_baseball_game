@@ -3,7 +3,7 @@ $device-phone: 480px;
 
 #wrapper {
 	width: 480px;
-	background-color: #7db67b;
+	//background-color: white;
 }
 
 .device-phone {
@@ -54,21 +54,21 @@ $device-phone: 480px;
 }
 
 #ballField{
-	width: 100%;
-	height: 440px;
-	background-color: red;
-	background-image: url("/Users/traciwilliams/Sites/Baseball_Game/trivia_baseball_game/images/Team-Lunch2.png");
-	background-size: cover;
+//	width: 100%;
+//	height: 440px;
+//	background-color: red;
+	background-image: url("/Users/traciwilliams/Sites/Baseball_Game/trivia_baseball_game/images/Team-Lunch2.psd");
+//	background-size: cover;
 }
-
-#baseball {
-	width: 3%;
-	height: 3%;
-	background-color: red;
-	position: absolute;
+//
+//#baseball {
+//	width: 3%;
+//	height: 3%;
+//	background-color: red;
+//	position: absolute;
 	//homebase
-	top:690px;
-	right:1020px;
+	//top:690px;
+	//right:1020px;
 
 	//firstbase
 	//top: 540px;
@@ -81,7 +81,7 @@ $device-phone: 480px;
 	//thirdbase
 	//top:540px;
 	//right:1160px;
-}
+//}
 
 #scoreboard {
 	background-color: white;
