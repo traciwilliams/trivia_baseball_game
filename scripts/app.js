@@ -19,9 +19,12 @@ function timer(){
 
 //=================^^^^^^^BUILD ANSWER OPTION FUNCTION^^^^^^^^^======================
 
-function buildAnswerOption(answer) {
-    console.log(answer,  'if you do answer.question = the question you wrote')
+function buildAnswerOption(answer, dummy2, dummy3, dummy4) {
+
     var isAnswerCorrect = answer;
+    var dummy2 = dummy2;
+    var dummy3 = dummy3;
+    var dummy4 = dummy4;
 
     var el = document.getElementById("radioButtons");
     //var tableEl = document.createElement('table');
@@ -36,13 +39,15 @@ function buildAnswerOption(answer) {
     var tabledata3 = document.createElement("td");
     var tabledata4 = document.createElement("td");
 
-
     var checkbox = document.createElement("input");
     var checkbox2 = document.createElement("input");
     var checkbox3 = document.createElement("input");
     var checkbox4 = document.createElement("input");
 
     var label = document.createElement("label");
+    var label2 = document.createElement("label");
+    var label3 = document.createElement("label");
+    var label4 = document.createElement("label");
 
     //3 more checkboxes
     checkbox.setAttribute("type","radio");
@@ -56,19 +61,27 @@ function buildAnswerOption(answer) {
 
     label.id = "answer";
 
+    //label.id = questionOne.answer
+    // label2.innerText = questionOne.dummy1
+    // label3.innerText = questionOne.dummy2
+    // label4.innerText = questionOne.dummy3
+
+    label2.id = "dummy2";
+    label3.id = "dummy3";
+    label4.id = "dummy4";
+
 
     checkbox.checked = isAnswerCorrect;
     label.innerText = answer;
+    label2.innerText = dummy2;
+    label3.innerText = dummy3;
+    label4.innerText = dummy4;
 
     //td
     tabledata.appendChild(label);
-
-    // arrray of your answers
-    // label, label2, label3, label4
-    //write function thats returns a random value from the array/
-    // return that value of the label that you chose, and slice it out of the array (look up removing certain index numbers from
-    //array
-
+    tabledata2.appendChild(label2);
+    tabledata3.appendChild(label3);
+    tabledata4.appendChild(label4);
 
     tabledata.appendChild(checkbox);
     tabledata2.appendChild(checkbox2);
@@ -89,6 +102,28 @@ function buildAnswerOption(answer) {
     tableBody.appendChild(tablerow2);
 
 }
+
+
+
+function QuestionMaker(question, answer, dummy1, dummy2, dummy3){
+    this.question = question;
+    this.answer = answer;
+    this.dummy1 = dummy1;
+    this.dummy2 = dummy2;
+    this.dummy3 = dummy3;
+}
+
+// pass this to the build an answer function
+var questionOne = new QuestionMaker("The last player before Javier Baez to homer in a 1-0 postseason game is playing in the ALDS this year, but not for the same team.", "Boston's Mike Napoli", "Bernie Sanders", "Ryne Sandberg", "Michael Johnson")
+
+
+
+    // Calling the function
+// most likely in a next question button
+// make your construtor which is line 349, then call function builAnswerOptions(questionOne)
+
+
+
 
 
 
