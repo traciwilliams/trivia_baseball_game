@@ -167,31 +167,31 @@
 //this is populates the question, answer and three choices on the webpage
 //however the answer is always in the same place
 //
-// Question();
-//      function Question(question, answer, choice2, choice3, choice4) {
-//          this.question = question;
-//          this.answer = answer;
-//          this.choice2 = choice2;
-//          this.choice3 = choice3;
-//          this.choice4 = choice4;
-//      }
-//
-//      var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez", "Ryne Sandburg");
-//
-//         question = document.getElementById('question');
-//         question.textContent = (firstQuestion.question);
-//
-//         answer = document.getElementById('answer');
-//         answer.textContent = (firstQuestion.answer);
-//
-//         choice2 = document.getElementById('choiceTwo');
-//         choice2.textContent = (firstQuestion.choice2);
-//
-//         choice3 = document.getElementById('choiceThree');
-//         choice3.textContent = (firstQuestion.choice3);
-//
-//         choice4 = document.getElementById('choiceFour');
-//         choice4.textContent = (firstQuestion.choice4);
+Question();
+     function Question(question, answer, choice2, choice3, choice4) {
+         this.question = question;
+         this.answer = answer;
+         this.choice2 = choice2;
+         this.choice3 = choice3;
+         this.choice4 = choice4;
+     }
+
+     var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez", "Ryne Sandburg");
+
+        question = document.getElementById('question');
+        question.textContent = (firstQuestion.question);
+
+        answer = document.getElementById('answer');
+        answer.textContent = (firstQuestion.answer);
+
+        choice2 = document.getElementById('choiceTwo');
+        choice2.textContent = (firstQuestion.choice2);
+
+        choice3 = document.getElementById('choiceThree');
+        choice3.textContent = (firstQuestion.choice3);
+
+        choice4 = document.getElementById('choiceFour');
+        choice4.textContent = (firstQuestion.choice4);
 //======================^^^^^^^QUIZ CONSTRUCTOR^^^^^^^^^========================
 
 

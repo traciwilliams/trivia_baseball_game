@@ -3,62 +3,91 @@ $device-phone: 480px;
 
 #wrapper {
 	width: 480px;
+	//background-color: #a8a572; //inside bases brown
+	//background-color: #047700;//baseball field green
+	//background-color: #8e6628;//GA darker brown
+	//background-color: #987032;//GA brown
+	//background-color: #78bc76;//light green
 	//background-color: white;
 }
 
 .device-phone {
 	font-size: 1rem;
-	border: 1px solid purple;
 	display: none;
 	visibility: hidden;
 }
 
 #topTitle {
+	font-family: "Frijole";
+	//font-family: "Adobe Garamond Pro";
+	color: black;
+	//background-color: #a8a572; //inside bases brown
+	//background-color: #047700;//baseball field green
+	//background-color: #8e6628;//GA darker brown
+	//background-color: #987032;//GA brown
+	//background-color: #78bc76;//light green
+	//background-color: white;
 	margin: 0 auto;
 	padding: 10px 10px 0px 10px;
+	float: left;
 }
 
 #question {
+	//font-family: "Adobe Garamond Pro";
+	font-family: "Martel+Sans:200";
+	//color: #a8a572; //inside bases brown
+	//color: #047700;//baseball field green
+	//color: #8e6628;//GA darker brown
+	//color: #987032;//GA brown
+	//color: #78bc76;//light green
+	//color: white;
+	color: black;
 	font-size: 20px;
 	margin: 0 auto;
-	padding: 0px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	//background-color: #a8a572; //inside bases brown
+	//background-color: #047700;//baseball field green
+	//background-color: #8e6628;//GA darker brown
+	//background-color: #987032;//GA brown
+	//background-color: #78bc76;//light green
+	//background-color: white;
+	//float: left;
 }
 
-
-#fourButtons {
-	width: 100%;
-	margin: 0 auto;
-	padding: 0px 20px 0px 20px;
-}
-
-
-#buttonNumberOne,
-#buttonNumberTwo,
-#buttonNumberThree,
-#buttonNumberFour, {
-	width: 80px;
-	margin: 0 auto;
-	padding: 0px 20px 0px 20px;
-}
-
-#timer {
-	float: right;
-	background-color: white;
-	padding: 5px 5px 5px 5px;
-
-}
 #scoreboard {
-	float: right;
-	background-color: purple;
-	padding: 5px 5px 5px 5px;
+	font-family: "Adobe Garamond Pro";
+	//color: #a8a572; //inside bases brown
+	//color: #047700;//baseball field green
+	//color: #8e6628;//GA darker brown
+	//color: #987032;//GA brown
+	//color: #78bc76;//light green
+	//color: white;
+	color: black;
+	//background-color: #a8a572; //inside bases brown
+	//background-color: #047700;//baseball field green
+	//background-color: #8e6628;//GA darker brown
+	//background-color: #987032;//GA brown
+	//background-color: #78bc76;//light green
+	//background-color: white;
+	padding: 1px 1px 1px 1px;
+	//float: right;
+	margin: 0 auto;
 }
+
+#radioButtons {
+	margin: 0 auto;
+}
+
+label {
+	display: inline;
+}
+
 
 #ballField{
-//	width: 100%;
-//	height: 440px;
-//	background-color: red;
-	background-image: url("/Users/traciwilliams/Sites/Baseball_Game/trivia_baseball_game/images/Team-Lunch2.psd");
-//	background-size: cover;
+	width: 100%;
+	height: 440px;
+	background-image: url("/Users/traciwilliams/Sites/Baseball_Game/trivia_baseball_game/images/Team-Lunch3.png");
+	background-size: cover;
 }
 //
 //#baseball {
@@ -82,10 +111,10 @@ $device-phone: 480px;
 	//top:540px;
 	//right:1160px;
 //}
-
-#scoreboard {
-	background-color: white;
-}
+//
+//#scoreboard {
+//	background-color: white;
+//}
 //====media queries=====
 @media (min-width: $device-phone) {
 	// do stuff to our styles

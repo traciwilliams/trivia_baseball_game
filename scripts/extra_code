@@ -93,3 +93,19 @@ function buildAnswerOption(text, isAnswer) {
     return el;
 }
 
+
+//#fourButtons {
+//	width: 100%;
+//	margin: 0 auto;
+//	padding: 0px 20px 0px 20px;
+//}
+//
+//
+//#buttonNumberOne,
+//#buttonNumberTwo,
+//#buttonNumberThree,
+//#buttonNumberFour, {
+//	width: 80px;
+//	margin: 0 auto;
+//	padding: 0px 20px 0px 20px;
+//}

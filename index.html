@@ -16,6 +16,9 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:200|Frijole" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans:200" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -33,42 +36,60 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="wrapper">
-    <div class="row">
+    <!--<div class="row">-->
 
 
-        <div class="twelve column">
-        <header id="topTitle"><h1>Question</h1></header>
+        <!--<div class="twelve column">-->
+        <!--<header id="topTitle"><h1>Question</h1></header>-->
+        <!--<section id="question">-->
+        <!--</section>-->
 
-        <section id="question">
-        </section>
+        <header id="topTitle"><h4>Question:</h4></header>
+        <section id="question"></section>
+
+        <img src=""<img src="images/Team-Lunch3.png"/>
 
 
-      <!--SCOREBOARD and TIMER-->
-        <table style="width:10%" id="scoreboard">
-            <tr><td>Runs</td></tr>
-            <tr><td id="runs"></td></tr>
-            <tr><td>Outs</td></tr>
-            <tr><td id="outs"></td></tr>
-            <tr><td id="timer">Go!</td></tr>
-        </table>
+      <!--SCOREBOARD and TIMER
+
+
+
+
+      --<div>-->
+
+       <!--<div id="runs">Runs</div>-->
+       <!--<div id="outs">Outs</div>-->
+       <!--<div id="timer">Go!</div>-->
+
+     <!--</div>-->
+
+
+      <table id="scoreboard" style="width:50%">
+            <tr>
+              <th>Runs</th>
+              <th>Outs</th>
+              <th>Timer</th>
+            </tr>
+          <tr>
+              <td><div id="runs">0</div></td>
+              <td><div id="outs">0</div></td>
+              <td><div id="timer">Go!</div></td>
+          </tr>
+      </table>
 
 
        <div id="questContainer"></div>
        <div id="ansContainer"></div>
 
 
+            <table style="width:100%" id="radioButtons">
 
-            <table style="width:100%">
                 <tr>
                     <td><input type = "radio" name="baseball" value="radio"/><label id="answer"></label></td>
-                </tr>
-                <tr>
                     <td><input type = "radio" name="baseball" value="radio"/><label id="choiceTwo"></label></td>
                 </tr>
                 <tr>
                     <td><input type = "radio" name="baseball" value="radio"/><label id="choiceThree"></label></td>
-                </tr>
-                <tr>
                     <td><input type = "radio" name="baseball" value="radio"/><label id="choiceFour"></label></td>
                 </tr>
             </table>
@@ -80,18 +101,18 @@
         </section>
 
      <!--TESTING BUTTON -->
-            <section>
-                <button id="resetButton">ResetButton</button>
-            </section>
+            <!--<section>-->
+                <!--<button id="resetButton">ResetButton</button>-->
+            <!--</section>-->
 
      <!--&lt;!&ndash;   BASEBALL IMAGE&ndash;&gt;-->
-        <!--<section id="ballField">-->
+        <section id="ballField">
         <!--<div id="baseball"><img src="images/baseball_small.png" height="50" width="50"/></div>-->
         <!--<div id="baseball">ball</div>-->
-        <!--</section>-->
+        </section>
 
-      </div>
-    </div>
+      <!--</div>-->
+    <!--</div>-->
   </div><!--end of wrapper-->
 
   <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
