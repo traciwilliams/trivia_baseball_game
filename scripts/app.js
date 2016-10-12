@@ -119,41 +119,70 @@
 
 
 //=================BUILD ANSWER OPTION FUNCTION 2 by Traci======================
-//function takes 4 arguments
-//assigns an id to the answer argument
-//see console output below
+// function takes 4 arguments
+// assigns an id to the answer argument
+// see console output below
 
 
-// function buildAnswerOption(option, answer, option, option) {
-//     var isAnswerCorrect = answer;
-//     var optionText = option;
-//
-//     var questDiv = document.getElementById("questContainer");
-//
-//     var el = document.createElement("div");
-//     var label = document.createElement("label");
-//     var checkbox = document.createElement("input");
-//     label.id = "answer";
-//
-//     el.appendChild(label);
-//     el.appendChild(checkbox);
-//
-//     checkbox.checked = isAnswerCorrect;
-//
-//     label.innerText = answer;
-//     return el;
-// }
-//
-//
-// var questDiv = document.getElementById("questContainer");
+function buildAnswerOption(answer, option1, option, option) {
+    var isAnswerCorrect = answer;
+    var option1 = option1;
+
+    //var optionText = option;
+    //var questDiv = document.getElementById("questContainer");
+
+    var el = document.createElement("div");
+    var label = document.createElement("label");
+    var checkbox = document.createElement("input");
+    label.id = "answer";
+
+    var el1 = document.createElement("div");
+    var label1 = document.createElement("label");
+    var checkbox1 = document.createElement("input");
+
+
+     //build the other 3 options
+     // make array []
+     // put all of the 4 elements into []
+     // use Math.random() to shuffle
+
+    el.appendChild(label);
+    el.appendChild(checkbox);
+
+    el1.appendChild(label1);
+    el1.appendChild(checkbox1);
+
+    checkbox.checked = isAnswerCorrect;
+    checkbox1.checked = option1;
+
+    label.innerText = answer;
+    label1.innerText = option1;
+
+    return el;
+    return el1;
+}
+
+
+//var questDiv = document.getElementById("questContainer");
 //
 // //=====console output====================
-// buildAnswerOption("Mickey Mantel", "Joe Blanton", "Ryne Sandburg", "Tim Gould")
+// buildAnswerOption("Joe Blanton", "Mickey Mantel", "Ryne Sandburg", "Tim Gould")
 //
 // <div>
 //     <label id="answer">
 //     <input>
 // </div>
+
+
+
+
+
+
+
+
+
+
+
 
 //============^^^^^^^^^^BUILD ANSWER OPTION FUNCTION 2 by Traci^^^^^^^^===========================
 
@@ -166,32 +195,33 @@
 //======================QUIZ CONSTRUCTOR========================
 //this is populates the question, answer and three choices on the webpage
 //however the answer is always in the same place
+//need to be able to loop thru these questions
+
+// Question();
+//      function Question(question, answer, choice2, choice3, choice4) {
+//          this.question = question;
+//          this.answer = answer;
+//          this.choice2 = choice2;
+//          this.choice3 = choice3;
+//          this.choice4 = choice4;
+//      }
 //
-Question();
-     function Question(question, answer, choice2, choice3, choice4) {
-         this.question = question;
-         this.answer = answer;
-         this.choice2 = choice2;
-         this.choice3 = choice3;
-         this.choice4 = choice4;
-     }
-
-     var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez", "Ryne Sandburg");
-
-        question = document.getElementById('question');
-        question.textContent = (firstQuestion.question);
-
-        answer = document.getElementById('answer');
-        answer.textContent = (firstQuestion.answer);
-
-        choice2 = document.getElementById('choiceTwo');
-        choice2.textContent = (firstQuestion.choice2);
-
-        choice3 = document.getElementById('choiceThree');
-        choice3.textContent = (firstQuestion.choice3);
-
-        choice4 = document.getElementById('choiceFour');
-        choice4.textContent = (firstQuestion.choice4);
+//      var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez", "Ryne Sandburg");
+//
+//         question = document.getElementById('question');
+//         question.textContent = (firstQuestion.question);
+//
+//         answer = document.getElementById('answer');
+//         answer.textContent = (firstQuestion.answer);
+//
+//         choice2 = document.getElementById('choiceTwo');
+//         choice2.textContent = (firstQuestion.choice2);
+//
+//         choice3 = document.getElementById('choiceThree');
+//         choice3.textContent = (firstQuestion.choice3);
+//
+//         choice4 = document.getElementById('choiceFour');
+//         choice4.textContent = (firstQuestion.choice4);
 //======================^^^^^^^QUIZ CONSTRUCTOR^^^^^^^^^========================
 
 

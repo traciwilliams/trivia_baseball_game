@@ -109,3 +109,61 @@ function buildAnswerOption(text, isAnswer) {
 //	margin: 0 auto;
 //	padding: 0px 20px 0px 20px;
 //}
+
+
+
+
+THIS WORKS
+
+///NEW ONE HERE
+
+function buildAnswerOption(answer, option1, option2, option3) {
+    var isAnswerCorrect = answer;
+    var option1 = option1;
+    var option2 = option2;
+    var option3 = option3;
+
+    //var optionText = option;
+
+    var el = document.createElement("div");
+    var el1 = document.createElement("div");
+    var el2 = document.createElement("div");
+    var el3 = document.createElement("div");
+    var label = document.createElement("label");
+    var label1 = document.createElement("label");
+    var label2 = document.createElement("label");
+    var label3 = document.createElement("label");
+    var checkbox = document.createElement("input");
+    var checkbox1 = document.createElement("input");
+    var checkbox2 = document.createElement("input");
+    var checkbox3 = document.createElement("input");
+
+    label.id = "answer";
+
+
+    el.appendChild(label);
+    el1.appendChild(label1);
+    el2.appendChild(label2);
+    el3.appendChild(label3);
+
+    el.appendChild(checkbox);
+    el1.appendChild(checkbox1);
+    el2.appendChild(checkbox2);
+    el3.appendChild(checkbox3);
+
+    checkbox.checked = isAnswerCorrect;
+    checkbox1.checked = option1;
+    checkbox2.checked = option2;
+    checkbox3.checked = option3;
+
+    label.innerText = answer;
+    label1.innerText = option1;
+    label2.innerText = option2;
+    label3.innerText = option3;
+
+    var questDiv = document.getElementById("questContainer");
+    questDiv.appendChild(label);
+    questDiv.appendChild(label1);
+    questDiv.appendChild(label2);
+    questDiv.appendChild(label3);
+}
