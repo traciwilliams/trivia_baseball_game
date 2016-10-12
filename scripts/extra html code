@@ -1,0 +1,32 @@
+<!--<div class="row">-->
+
+
+<!--<div class="twelve column">-->
+<!--<header id="topTitle"><h1>Question</h1></header>-->
+<!--<section id="question">-->
+<!--</section>-->
+
+
+
+<!--<img src="images/Team-Lunch3.png"/>-->
+
+
+
+<!--<table style="width:100%" id="radioButtons2">-->
+<!--<tr>-->
+<!--<td><input type = "radio" name="baseball" value="radio"/><label id="answer"></label></td>-->
+<!--<td><input type = "radio" name="baseball" value="radio"/><label id="choiceTwo"></label></td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td><input type = "radio" name="baseball" value="radio"/><label id="choiceThree"></label></td>-->
+<!--<td><input type = "radio" name="baseball" value="radio"/><label id="choiceFour"></label></td>-->
+<!--</tr>-->
+<!--</table>-->
+
+
+
+
+<!--TESTING BUTTON -->
+<!--<section>-->
+<!--<button id="resetButton">ResetButton</button>-->
+<!--</section>-->
