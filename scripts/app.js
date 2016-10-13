@@ -169,23 +169,55 @@ window.onload = function(event) {
                 runsCounter = runsCounter + 1;
 
                 document.getElementById("theRuns").innerText = runsCounter;
-                return;
+
+
+
+
+                var ballfield = document.getElementById("bases");
+                ballfield.src = runCalc(runsCounter)
+
+
 
             } else {
                 alert('you are wrong')
                 outsCounter = outsCounter + 1;
 
                 document.getElementById("theOuts").innerText = outsCounter;
-                return;
+
 
             }
 
         //};
 
+        checkGameOver()
+
     }
 }
 
 //
+function runCalc(runs){
+    if(runs === 1){
+        return 'images/first-base.jpg'
+    }
+    else if(runs === 2){
+        return 'images/second-base.jpg'
+    }
+    else if(runs === 3){
+        return 'images/third-base.jpg'
+    }
+    else if(runs === 4){
+        return 'images/home-run.jpg'
+    }
+    else {
+        console.log('nothing hit')
+    }
+}
+
+function checkGameOver(){
+    if(outsCounter === 3){
+        window.location.replace("exit.html");
+    }
+}
 
 
 // nextQuestion.onclick = function nextQuestion() {
