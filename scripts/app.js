@@ -1,17 +1,24 @@
+//==============
+
+
+
+
 
 //=================================TIMER=======================================
 //This time is a countdown from 10 to 0
 //will need to be reset once a new question is populated
 
-var count = 10;
-var counter= setInterval(timer, 1000);
+var count = 30;
+var counter= setInterval(timer, 1000); //1000 will  run it every 1 second
 
 function timer(){
-    count=count-1;
-    if (count < 0) {
-        return;
-    }
-    document.getElementById("timer").textContent = count;
+  count=count-1;
+  if (count < 0)
+  {
+     clearInterval(counter);
+     return;
+  }
+  document.getElementById("timer").innerHTML = count + " secs";
 };
 
 
@@ -57,6 +64,8 @@ function buildAnswerOption(answer) {
     //3 more checkboxes
     checkbox.setAttribute("type","radio");
     checkbox.setAttribute("name", "baseball");
+    checkbox.id = 'answer';//questionOne.answer;
+
     checkbox2.setAttribute("type","radio");
     checkbox2.setAttribute("name", "baseball");
     checkbox3.setAttribute("type","radio");
@@ -70,7 +79,6 @@ function buildAnswerOption(answer) {
     // label4.id = "dummy4";
 
     question = questionOne.question;
-    label.id = questionOne.answer;
     label.innerText = questionOne.answer;
     label2.innerText = questionOne.dummy2;
     label3.innerText = questionOne.dummy3;
@@ -140,6 +148,23 @@ var questionNine = new QuestionMaker("Who beat out Ted Williams for the American
 "Joe DiMaggio","Option2", "Option3", "Option4");
 var questionTen = new QuestionMaker("Who hit the ball that rolled between Bill Buckner's legs in the 1986 World Series?", "Mookie Wilson","Option2", "Option3", "Option4");
 
+var questionsArr = [];
+questionsArr.push(questionOne, questionTwo); // add all
+
+//================MATH RANDOM Calculation ==============
+
+
+function randomNumber(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+randomNumber(10, 20)
+
+
+
+
+
 
 //==============Calculation for Scoreboard ===========
 //when the user clicks on the submit button
@@ -164,31 +189,43 @@ function scoreRuns () {
 function scoreOuts (){
     scoreOuts = scoreOuts+1;
     return scoreOuts;
-
-
     document.getElementById("outs").textContent = scoreOuts;
 };
 
 
 
 //==============SUBMIT BUTTON  ===========
-// submitButton = document.getElementById("submitAns");
-//
-// submitButton.onclick = function ifCorrect(){
-//     console.log('are you working? why yes I am!')
-//     var correctAnswer = document.getElementById('answer');
-//     console.log(correctAnswer)
-//
-//
-//     if (correctAnswer.checked === true) {
-//         alert('You are correct!')
-//         runs = runs.value;
-//         runs += 1;
-//
-//
-//     } else {
-//         alert('you are wrong')
-//         outs = outs.value;
-//         outs += 1;
-//     }
-// };
+var submitButton = document.getElementById("submitAns");
+
+//globals
+// runs = 0;
+// outs = 0;
+
+//onload
+submitButton.onclick = function ifCorrect(){
+    console.log('are you working? why yes I am!')
+    var correctAnswer = document.getElementById('answer');
+
+    var answer = document.querySelector('#answer');
+
+
+    if (answer.checked === true) {
+        alert('You are correct!')
+        //runs = runs.value;
+
+        runs = runs + 1;
+        return runs;
+
+    } else {
+        alert('you are wrong')
+        //outs = outs.value;
+
+        outs = outs + 1;
+        return outs;
+    }
+};
+
+
+window.onload = function(event) {
+
+};
