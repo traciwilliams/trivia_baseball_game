@@ -298,8 +298,43 @@ function buildAnswerOption(answer) {
 
 
 
+//==============Calculation for Scoreboard ===========
+//when the user clicks on the submit button
+//if the answer is correct then it's one run
+//if the answer is incorrect it's one out
+//the button is working
+//the calculation is not working
+
+runs = document.getElementById("runs");
+outs = document.getElementById("outs");
+
+runs = 0;
+outs = 0;
+
+function scoreRuns () {
+    scoreRuns = scoreRuns+1;
+    return;
+
+    document.getElementById("runs").textContent = scoreRuns;
+};
+
+function scoreOuts (){
+    scoreOuts = scoreOuts+1;
+    return scoreOuts;
+    document.getElementById("outs").textContent = scoreOuts;
+};
 
 
+
+//================MATH RANDOM Calculation ==============
+
+//
+// function randomNumber(min, max) {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+// randomNumber(10, 20)
 
 
 

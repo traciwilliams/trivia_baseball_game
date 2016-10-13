@@ -1,26 +1,29 @@
-//==============
+//==============GLOBAL VARIABLES ========================================
 
+// var count = 30;//timer function
+// var counter= setInterval(timer, 1000);
 
+var submitButton = document.getElementById("submitAns");
+var runsEl = document.getElementById("theRuns");
+var runsCounter = 0;
+var outsEl = document.getElementById("theOuts");
+var outsCounter = 0;
+var questionCounter = 0;
 
+var questionsArr = [];
+questionsArr.push(questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen); // add all
 
-
-//=================================TIMER=======================================
-//This time is a countdown from 10 to 0
-//will need to be reset once a new question is populated
-
-var count = 30;
-var counter= setInterval(timer, 1000); //1000 will  run it every 1 second
-
-function timer(){
-  count=count-1;
-  if (count < 0)
-  {
-     clearInterval(counter);
-     return;
-  }
-  document.getElementById("timer").innerHTML = count + " secs";
-};
-
+var questionOne = new QuestionMaker("Who is the last player before Javier Baez to homer in a 1-0 postseason game is playing in the ALDS this year, but not for the same team.", "Boston's Mike Napoli", "Bernie Sanders", "Ryne Sandberg", "Michael Johnson")
+var questionTwo = new QuestionMaker("Who led the 2007 Red Sox in wins, with 20?", "Josh Beckett (20-7)", "Option2", "Option3", "Option4")
+var questionThree = new QuestionMaker("Who was the last player to reach 1,000 career hits in a Giants uniform before Buster Posey?","Rich Aurilia (2003)","Option2", "Option3", "Option4");
+var questionFour = new QuestionMaker("Who finished second to Jose Fernandez in 2013 National League Rookie of the Year voting?","Yasiel Puig, Dodgers","Option2", "Option3", "Option4");
+var questionFive = new QuestionMaker("Against what opposing team did Babe Ruth hit his first career home run?", "New York Yankees","Option2", "Option3", "Option4");
+var questionSix = new QuestionMaker("Who was the first Major League player to pitch a ball over 100 mph?", "Nolan Ryan","Option2", "Option3", "Option4");
+var questionSeven = new QuestionMaker("What Baltimore Orioles manager was ejected from a record 91 games?", "Earl Weaver","Option2", "Option3", "Option4");
+var questionEight = new QuestionMaker("What player hit 70 home runs in 1998?", "Mark McGwire","Option2", "Option3", "Option4");
+var questionNine = new QuestionMaker("Who beat out Ted Williams for the American League's Most Valuable Player award in 1941, when Williams hit for a .406 average?",
+    "Joe DiMaggio","Option2", "Option3", "Option4");
+var questionTen = new QuestionMaker("Who hit the ball that rolled between Bill Buckner's legs in the 1986 World Series?", "Mookie Wilson","Option2", "Option3", "Option4");
 
 
 
@@ -39,8 +42,8 @@ function buildAnswerOption(answer) {
     var dummy4 = dummy4;
 
     var el = document.getElementById("radioButtons");
-    //var tableEl = document.createElement('table');
-    var tableEl = document.getElementById("radioButtons")
+    //var tableEl = document.createElement('table');//this is the one
+    var tableEl = document.getElementById("radioButtons");
     var tableBody = document.createElement("tbody");
 
     var tablerow = document.createElement("tr");
@@ -123,7 +126,7 @@ function buildAnswerOption(answer) {
     tableEl.appendChild(tableBody);
     tableBody.appendChild(tablerow2);
 
-}
+};
 
 
 function QuestionMaker(question, answer, dummy2, dummy3, dummy4){
@@ -132,100 +135,65 @@ function QuestionMaker(question, answer, dummy2, dummy3, dummy4){
     this.dummy2 = dummy2;
     this.dummy3 = dummy3;
     this.dummy4 = dummy4;
-}
-
-// pass this to the build an answer function
-var questionOne = new QuestionMaker("Who is the last player before Javier Baez to homer in a 1-0 postseason game is playing in the ALDS this year, but not for the same team.", "Boston's Mike Napoli", "Bernie Sanders", "Ryne Sandberg", "Michael Johnson")
-
-var questionTwo = new QuestionMaker("Who led the 2007 Red Sox in wins, with 20?", "Josh Beckett (20-7)", "Option2", "Option3", "Option4")
-var questionThree = new QuestionMaker("Who was the last player to reach 1,000 career hits in a Giants uniform before Buster Posey?","Rich Aurilia (2003)","Option2", "Option3", "Option4");
-var questionFour = new QuestionMaker("Who finished second to Jose Fernandez in 2013 National League Rookie of the Year voting?","Yasiel Puig, Dodgers","Option2", "Option3", "Option4");
-var questionFive = new QuestionMaker("Against what opposing team did Babe Ruth hit his first career home run?", "New York Yankees","Option2", "Option3", "Option4");
-var questionSix = new QuestionMaker("Who was the first Major League player to pitch a ball over 100 mph?", "Nolan Ryan","Option2", "Option3", "Option4");
-var questionSeven = new QuestionMaker("What Baltimore Orioles manager was ejected from a record 91 games?", "Earl Weaver","Option2", "Option3", "Option4");
-var questionEight = new QuestionMaker("What player hit 70 home runs in 1998?", "Mark McGwire","Option2", "Option3", "Option4");
-var questionNine = new QuestionMaker("Who beat out Ted Williams for the American League's Most Valuable Player award in 1941, when Williams hit for a .406 average?",
-"Joe DiMaggio","Option2", "Option3", "Option4");
-var questionTen = new QuestionMaker("Who hit the ball that rolled between Bill Buckner's legs in the 1986 World Series?", "Mookie Wilson","Option2", "Option3", "Option4");
-
-var questionsArr = [];
-questionsArr.push(questionOne, questionTwo); // add all
-
-//================MATH RANDOM Calculation ==============
-
-
-function randomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-randomNumber(10, 20)
-
-
-
-
-
-
-//==============Calculation for Scoreboard ===========
-//when the user clicks on the submit button
-//if the answer is correct then it's one run
-//if the answer is incorrect it's one out
-//the button is working
-//the calculation is not working
-
-runs = document.getElementById("runs");
-outs = document.getElementById("outs");
-
-runs = 0;
-outs = 0;
-
-function scoreRuns () {
-    scoreRuns = scoreRuns+1;
-    return;
-
-    document.getElementById("runs").textContent = scoreRuns;
-};
-
-function scoreOuts (){
-    scoreOuts = scoreOuts+1;
-    return scoreOuts;
-    document.getElementById("outs").textContent = scoreOuts;
 };
 
 
 
-//==============SUBMIT BUTTON  ===========
-var submitButton = document.getElementById("submitAns");
 
-//globals
-// runs = 0;
-// outs = 0;
-
-//onload
-submitButton.onclick = function ifCorrect(){
-    console.log('are you working? why yes I am!')
-    var correctAnswer = document.getElementById('answer');
-
-    var answer = document.querySelector('#answer');
-
-
-    if (answer.checked === true) {
-        alert('You are correct!')
-        //runs = runs.value;
-
-        runs = runs + 1;
-        return runs;
-
-    } else {
-        alert('you are wrong')
-        //outs = outs.value;
-
-        outs = outs + 1;
-        return outs;
-    }
-};
-
+//==================WINDOW.ONLOAD===============
 
 window.onload = function(event) {
 
-};
+    buildAnswerOption();
+
+    // function timer(){
+    //     count=count-1;
+    //     if (count < 0)
+    //     {
+    //         clearInterval(counter);
+    //         return;
+    //     }
+    //     document.getElementById("timer").innerHTML = count + " secs";
+    // };
+
+
+    submitButton.onclick = function ifCorrect() {
+        console.log('are you working? why yes I am!')
+        var correctAnswer = document.getElementById('answer');
+        var answer = document.querySelector('#answer');
+
+
+        for (var i = 0; i < questionsArr.length; i++) {
+
+            if (answer.checked === true) {
+                alert('You are correct!')
+                runsCounter = runsCounter + 1;
+
+                document.getElementById("theRuns").textContent = runsCounter;
+                return;
+
+            } else {
+                alert('you are wrong')
+                outsCounter = outsCounter + 1;
+
+                document.getElementById("theOuts").textContent = outsCounter;
+                return;
+
+            }
+
+        };
+
+    }
+}
+
+//===========SCORE==============
+
+//document.getElementById("score").value=score;
+
+
+
+function nextQuestion() {
+    var ques = questionsArr[questionCountrer];
+    // call function to build question
+    questionCountrer++;
+}
