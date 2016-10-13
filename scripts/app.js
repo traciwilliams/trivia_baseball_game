@@ -19,7 +19,12 @@ function timer(){
 
 //=================^^^^^^^BUILD ANSWER OPTION FUNCTION^^^^^^^^^======================
 
-function buildAnswerOption(answer, dummy2, dummy3, dummy4) {
+function buildAnswerOption(answer) {
+    //var questionEl = document.getElementById("questContainer");
+
+    var question = document.getElementById("questionEl");
+    question.textContent = (questionOne.question);
+    //question.textContent = (questionTwo.question);
 
     var isAnswerCorrect = answer;
     var dummy2 = dummy2;
@@ -59,23 +64,32 @@ function buildAnswerOption(answer, dummy2, dummy3, dummy4) {
     checkbox4.setAttribute("type","radio");
     checkbox4.setAttribute("name", "baseball");
 
-    label.id = "answer";
+    // label.id = "answer";
+    // label2.id = "dummy2";
+    // label3.id = "dummy3";
+    // label4.id = "dummy4";
 
-    //label.id = questionOne.answer
-    // label2.innerText = questionOne.dummy1
-    // label3.innerText = questionOne.dummy2
-    // label4.innerText = questionOne.dummy3
+    question = questionOne.question;
+    label.id = questionOne.answer;
+    label.innerText = questionOne.answer;
+    label2.innerText = questionOne.dummy2;
+    label3.innerText = questionOne.dummy3;
+    label4.innerText = questionOne.dummy4;
 
-    label2.id = "dummy2";
-    label3.id = "dummy3";
-    label4.id = "dummy4";
 
+    // question = questionTwo.question;
+    // label.id = questionTwo.answer;
+    // label.innerText = questionTwo.answer;
+    // label2.innerText = questionTwo.dummy2;
+    // label3.innerText = questionTwo.dummy3;
+    // label4.innerText = questionTwo.dummy4;
 
     checkbox.checked = isAnswerCorrect;
-    label.innerText = answer;
-    label2.innerText = dummy2;
-    label3.innerText = dummy3;
-    label4.innerText = dummy4;
+
+    // label.innerText = answer;
+    // label2.innerText = dummy2;
+    // label3.innerText = dummy3;
+    // label4.innerText = dummy4;
 
     //td
     tabledata.appendChild(label);
@@ -104,336 +118,77 @@ function buildAnswerOption(answer, dummy2, dummy3, dummy4) {
 }
 
 
-
-function QuestionMaker(question, answer, dummy1, dummy2, dummy3){
+function QuestionMaker(question, answer, dummy2, dummy3, dummy4){
     this.question = question;
     this.answer = answer;
-    this.dummy1 = dummy1;
     this.dummy2 = dummy2;
     this.dummy3 = dummy3;
+    this.dummy4 = dummy4;
 }
 
 // pass this to the build an answer function
-var questionOne = new QuestionMaker("The last player before Javier Baez to homer in a 1-0 postseason game is playing in the ALDS this year, but not for the same team.", "Boston's Mike Napoli", "Bernie Sanders", "Ryne Sandberg", "Michael Johnson")
+var questionOne = new QuestionMaker("Who is the last player before Javier Baez to homer in a 1-0 postseason game is playing in the ALDS this year, but not for the same team.", "Boston's Mike Napoli", "Bernie Sanders", "Ryne Sandberg", "Michael Johnson")
+
+var questionTwo = new QuestionMaker("Who led the 2007 Red Sox in wins, with 20?", "Josh Beckett (20-7)", "Option2", "Option3", "Option4")
+var questionThree = new QuestionMaker("Who was the last player to reach 1,000 career hits in a Giants uniform before Buster Posey?","Rich Aurilia (2003)","Option2", "Option3", "Option4");
+var questionFour = new QuestionMaker("Who finished second to Jose Fernandez in 2013 National League Rookie of the Year voting?","Yasiel Puig, Dodgers","Option2", "Option3", "Option4");
+var questionFive = new QuestionMaker("Against what opposing team did Babe Ruth hit his first career home run?", "New York Yankees","Option2", "Option3", "Option4");
+var questionSix = new QuestionMaker("Who was the first Major League player to pitch a ball over 100 mph?", "Nolan Ryan","Option2", "Option3", "Option4");
+var questionSeven = new QuestionMaker("What Baltimore Orioles manager was ejected from a record 91 games?", "Earl Weaver","Option2", "Option3", "Option4");
+var questionEight = new QuestionMaker("What player hit 70 home runs in 1998?", "Mark McGwire","Option2", "Option3", "Option4");
+var questionNine = new QuestionMaker("Who beat out Ted Williams for the American League's Most Valuable Player award in 1941, when Williams hit for a .406 average?",
+"Joe DiMaggio","Option2", "Option3", "Option4");
+var questionTen = new QuestionMaker("Who hit the ball that rolled between Bill Buckner's legs in the 1986 World Series?", "Mookie Wilson","Option2", "Option3", "Option4");
 
 
-
-    // Calling the function
-// most likely in a next question button
-// make your construtor which is line 349, then call function builAnswerOptions(questionOne)
-
-
-
-
-
-
-
-
-//==============SUBMIT BUTTON and Calculation for Scoreboard ===========
+//==============Calculation for Scoreboard ===========
 //when the user clicks on the submit button
 //if the answer is correct then it's one run
 //if the answer is incorrect it's one out
 //the button is working
 //the calculation is not working
 
-
-runs = document.getElementById("runs")
-outs = document.getElementById("outs")
+runs = document.getElementById("runs");
+outs = document.getElementById("outs");
 
 runs = 0;
 outs = 0;
 
+function scoreRuns () {
+    scoreRuns = scoreRuns+1;
+    return;
 
-submitButton = document.getElementById("submitAns");
+    document.getElementById("runs").textContent = scoreRuns;
+};
 
-submitButton.onclick = function ifCorrect(){
-    console.log('are you working? why yes I am!')
-    var correctAnswer = document.getElementById('answer');
-    console.log(correctAnswer)
-
-
-    if (correctAnswer.checked === true) {
-        alert('You are correct!')
-        runs = runs.value;
-        runs += 1;
+function scoreOuts (){
+    scoreOuts = scoreOuts+1;
+    return scoreOuts;
 
 
-    } else {
-        alert('you are wrong')
-        outs = outs.value;
-        outs += 1;
-    }
+    document.getElementById("outs").textContent = scoreOuts;
 };
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//THIS WORKS DO NOT DELETE!!!
-//=================BUILD ANSWER OPTION FUNCTION 2 by Traci======================
-// function takes 4 arguments
-// assigns an id to the answer argument
-// see console output below
+//==============SUBMIT BUTTON  ===========
+// submitButton = document.getElementById("submitAns");
 //
-// THIS WORKS DO NOT DELETE
-// function buildAnswerOption(answer, option1, option2, option3) {
-//     var isAnswerCorrect = answer;
-//     var option1 = option1;
-//     var option2 = option2;
-//     var option3 = option3;
-//
-//     //var optionText = option;
-//     //var questDiv = document.getElementById("questContainer");
-//
-//     var el = document.getElementById("radioButtons");
-//     var el1 = document.getElementById("radioButtons");
-//     var el2 = document.getElementById("radioButtons");
-//     var el3 = document.getElementById("radioButtons");
-//
-//     var label = document.createElement("label");
-//     var label1 = document.createElement("label");
-//     var label2 = document.createElement("label");
-//     var label3 = document.createElement("label");
-//
-//     var checkbox = document.createElement("input");
-//     var checkbox1 = document.createElement("input");
-//     var checkbox2 = document.createElement("input");
-//     var checkbox3 = document.createElement("input");
-//
-//     checkbox.setAttribute("type","radio");
-//     checkbox1.setAttribute("type","radio");
-//     checkbox2.setAttribute("type","radio");
-//     checkbox3.setAttribute("type","radio");
-//
-//     checkbox.setAttribute("name", "baseball");
-//     checkbox1.setAttribute("name", "baseball");
-//     checkbox2.setAttribute("name", "baseball");
-//     checkbox3.setAttribute("name", "baseball");
-//
-//     label.id = "answer";
+// submitButton.onclick = function ifCorrect(){
+//     console.log('are you working? why yes I am!')
+//     var correctAnswer = document.getElementById('answer');
+//     console.log(correctAnswer)
 //
 //
+//     if (correctAnswer.checked === true) {
+//         alert('You are correct!')
+//         runs = runs.value;
+//         runs += 1;
 //
-//      //build the other 3 options
-//      // make array []
-//      // put all of the 4 elements into []
-//      // use Math.random() to shuffle
 //
-//
-//     el.appendChild(label);
-//     el1.appendChild(label1);
-//     el2.appendChild(label2);
-//     el3.appendChild(label3);
-//
-//     el.appendChild(checkbox);
-//     el1.appendChild(checkbox1);
-//     el2.appendChild(checkbox2);
-//     el3.appendChild(checkbox3);
-//
-//     checkbox.checked = isAnswerCorrect;
-//     checkbox1.checked = option1;
-//     checkbox2.checked = option2;
-//     checkbox3.checked = option3;
-//
-//     label.innerText = answer;
-//     label1.innerText = option1;
-//     label2.innerText = option2;
-//     label3.innerText = option3;
-//
-//     var questDiv = document.getElementById("radioButtons");
-//     questDiv.appendChild(label);
-//     questDiv.appendChild(label1);
-//     questDiv.appendChild(label2);
-//     questDiv.appendChild(label3);
-// }
-
-
-//var questDiv = document.getElementById("questContainer");
-//
-// //=====console output====================
-// buildAnswerOption("Joe Blanton", "Mickey Mantel", "Ryne Sandburg", "Tim Gould")
-//
-// <div>
-//     <label id="answer">
-//     <input>
-// </div>
-
-
-
-
-function buildAnswerOption(answer) {
-    var isAnswerCorrect = answer;
-
-    var el = document.getElementById("radioButtons");
-
-    var tablerow = document.createElement("tr");
-    var tabledata = document.createElement("td");
-    var checkbox = document.createElement("input");
-    var label = document.createElement("label");
-
-    el.appendChild(tablerow);
-    tablerow.appendChild(tabledata);
-    tablerow.appendChild(label);
-
-    checkbox.setAttribute("type","radio");
-    checkbox.setAttribute("name", "baseball");
-
-    label.id = "answer";
-
-    //tabledata.appendChild(label);
-    //el.appendChild(label);
-    el.appendChild(checkbox);
-
-    checkbox.checked = isAnswerCorrect;
-
-    label.innerText = answer;
-
-    var questDiv = document.getElementById("radioButtons");
-    questDiv.appendChild(label);
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//============^^^^^^^^^^BUILD ANSWER OPTION FUNCTION 2 by Traci^^^^^^^^===========================
-
-
-
-
-
-
-
-//======================QUIZ CONSTRUCTOR========================
-//this is populates the question, answer and three choices on the webpage
-//however the answer is always in the same place
-//need to be able to loop thru these questions
-
-// Question();
-//      function Question(question, answer, choice2, choice3, choice4) {
-//          this.question = question;
-//          this.answer = answer;
-//          this.choice2 = choice2;
-//          this.choice3 = choice3;
-//          this.choice4 = choice4;
-//      }
-//
-//      var firstQuestion = new Question ("Who was the last pitcher before Travis Wood to hit a home run in the postseason?", "Joe Blanton", "Mickey Mantel", "Yogi Berra", "Alex Rodriguez", "Ryne Sandburg");
-//
-//         question = document.getElementById('question');
-//         question.textContent = (firstQuestion.question);
-//
-//         answer = document.getElementById('answer');
-//         answer.textContent = (firstQuestion.answer);
-//
-//         choice2 = document.getElementById('choiceTwo');
-//         choice2.textContent = (firstQuestion.choice2);
-//
-//         choice3 = document.getElementById('choiceThree');
-//         choice3.textContent = (firstQuestion.choice3);
-//
-//         choice4 = document.getElementById('choiceFour');
-//         choice4.textContent = (firstQuestion.choice4);
-//======================^^^^^^^QUIZ CONSTRUCTOR^^^^^^^^^========================
-
-
-//==============SUBMIT BUTTON and Calculation for Scoreboard ===========
-//when the user clicks on the submit button
-//if the answer is correct then it's one run
-//if the answer is incorrect it's one out
-//the button is working
-//the calculation is not working
-
-
-        // runs = document.getElementById("runs")
-        // outs = document.getElementById("outs")
-        //
-        // runs = 0;
-        // outs = 0;
-        //
-        //
-        // submitButton = document.getElementById("submitAns");
-        //
-        // submitButton.onclick = function ifCorrect(){
-        //     console.log('are you working? why yes I am!')
-        //     var correctAnswer = document.getElementById('answer');
-        //     console.log(correctAnswer)
-        //
-        //
-        //     if (correctAnswer.checked === true) {
-        //         alert('You are correct!')
-        //         runs = runs.value;
-        //         runs += 1;
-        //
-        //
-        //     } else {
-        //         alert('you are wrong')
-        //         outs = outs.value;
-        //         outs += 1;
-        //     }
-        // };
-//==============^^^^^^^^SUBMIT BUTTON and Calculation for Scoreboard^^^^^^^=================
-
-//=================================TIMER=======================================
-//This time is a countdown from 10 to 0
-//will need to be reset once a new question is populated
-
-var count = 10;
-var counter= setInterval(timer, 1000);
-
-function timer(){
-    count=count-1;
-    if (count < 0) {
-        return;
-    }
-    document.getElementById("timer").textContent = count;
-};
-
-//==============================^^^^^^^^^^TIMER^^^^^^^=======================================
-
-
-
-//window.onload = function(event) {}
+//     } else {
+//         alert('you are wrong')
+//         outs = outs.value;
+//         outs += 1;
+//     }
+// };

@@ -34,12 +34,12 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="wrapper">
+      <section>
         <header id="topTitle"><h4>Question:</h4></header>
-        <section id="question"></section>
-
+        <section id="questionEl"></section>
+      </section>
 
   <!--SCOREBOARD and TIMER-->
-
       <table id="scoreboard" style="width:50%">
             <tr>
               <th>Runs</th>
@@ -51,24 +51,27 @@
               <td><div id="outs">0</div></td>
               <td><div id="timer">Go!</div></td>
           </tr>
-      </table>
-
+      <!--</table>-->
 
   <!--====TABLE FOR ANSWER AND OPTIONS===-->
-
       <table style="width:100%" id="radioButtons">
       </table>
 
-
   <!-- ====SUBMIT BUTTON=== -->
-         <section>
-                <button id="submitAns">Submit</button>
-        </section>
+        <section>
+            <div>
+                <button id="submitAns">Submit Answer</button>
+            </div>
 
+            <div>
+              <button id="nextQuestion">Next Question</button>
+            </div>
+         </section>
 
 
  <!--=======BASEBALL GRAPHIC=======-->
         <section id="ballField">
+            <img src="images/Team-Lunch3.png"/>
         </section>
 
 
