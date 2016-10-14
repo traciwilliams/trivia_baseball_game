@@ -3,12 +3,6 @@ $device-phone: 480px;
 
 #wrapper {
 	width: 480px;
-	//background-color: #a8a572; //inside bases brown
-	//background-color: #047700;//baseball field green
-	//background-color: #8e6628;//GA darker brown
-	//background-color: #987032;//GA brown
-	//background-color: #78bc76;//light green
-	//background-color: white;
 }
 
 .device-phone {
@@ -18,64 +12,32 @@ $device-phone: 480px;
 }
 
 #topTitle {
-	font-family: "Frijole";
-	//font-family: "Adobe Garamond Pro";
+
+	font-family: "Adobe Garamond Pro";
 	color: black;
-	//background-color: #a8a572; //inside bases brown
-	//background-color: #047700;//baseball field green
-	//background-color: #8e6628;//GA darker brown
-	//background-color: #987032;//GA brown
-	//background-color: #78bc76;//light green
-	//background-color: white;
-	//margin: 0 auto;
 	padding: 10px 10px 0px 10px;
 	float: left;
 }
 
 #question {
-	//font-family: "Adobe Garamond Pro";
-	font-family: "Martel+Sans:200";
-	//color: #a8a572; //inside bases brown
-	//color: #047700;//baseball field green
-	//color: #8e6628;//GA darker brown
-	//color: #987032;//GA brown
-	//color: #78bc76;//light green
-	//color: white;
+	font-family: "Adobe Garamond Pro";
 	color: black;
 	font-size: 20px;
 	margin: 0 auto;
 	padding: 10px 10px 10px 10px;
-	//background-color: #a8a572; //inside bases brown
-	//background-color: #047700;//baseball field green
-	//background-color: #8e6628;//GA darker brown
-	//background-color: #987032;//GA brown
-	//background-color: #78bc76;//light green
-	//background-color: white;
-	//float: left;
 }
 
 #scoreboard {
 	font-family: "Adobe Garamond Pro";
-	//color: #a8a572; //inside bases brown
-	//color: #047700;//baseball field green
-	//color: #8e6628;//GA darker brown
-	//color: #987032;//GA brown
-	//color: #78bc76;//light green
-	//color: white;
 	color: black;
-	//background-color: #a8a572; //inside bases brown
-	//background-color: #047700;//baseball field green
-	//background-color: #8e6628;//GA darker brown
-	//background-color: #987032;//GA brown
-	//background-color: #78bc76;//light green
-	//background-color: white;
 	padding: 1px 1px 1px 1px;
-	//float: right;
 	margin: 0 auto;
 }
 
-#radioButtons {
+#radioButtons
+#restartGame {
 	margin: 0 auto;
+
 }
 
 label {
@@ -86,8 +48,7 @@ label {
 #ballField{
 	width: 100%;
 	height: 440px;
-	//background-image: url("/Users/traciwilliams/Sites/Baseball_Game/trivia_baseball_game/images/Team-Lunch3.png");
-	//background-size: cover;
+
 }
 
 #nextQuestion {
@@ -103,32 +64,6 @@ img {
 }
 
 
-//
-//#baseball {
-//	width: 3%;
-//	height: 3%;
-//	background-color: red;
-//	position: absolute;
-	//homebase
-	//top:690px;
-	//right:1020px;
-
-	//firstbase
-	//top: 540px;
-	//right: 880px;
-
-	//secondbase
-	//top:400px;
-	//right:1020px;
-
-	//thirdbase
-	//top:540px;
-	//right:1160px;
-//}
-//
-//#scoreboard {
-//	background-color: white;
-//}
 //====media queries=====
 @media (min-width: $device-phone) {
 	// do stuff to our styles

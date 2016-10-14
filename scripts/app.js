@@ -1,7 +1,7 @@
 //==============GLOBAL VARIABLES ========================================
 
-// var count = 30;//timer function
-// var counter= setInterval(timer, 1000);
+var count = 45;//timer function
+var counter= setInterval(timer, 1000);
 
 var submitButton = document.getElementById("submitAns");
 var nextButton = document.getElementById("nextQuestion");
@@ -13,17 +13,17 @@ var questionCounter = 0;
 
 var questionsArr = [];
 
-var questionOne = new QuestionMaker("Who is the last player before Javier Baez to homer in a 1-0 postseason game is playing in the ALDS this year, but not for the same team.", "Boston's Mike Napoli", "Bernie Sanders", "Ryne Sandberg", "Michael Johnson")
-var questionTwo = new QuestionMaker("Who led the 2007 Red Sox in wins, with 20?", "Josh Beckett (20-7)", "Option2", "Option3", "Option4")
-var questionThree = new QuestionMaker("Who was the last player to reach 1,000 career hits in a Giants uniform before Buster Posey?","Rich Aurilia (2003)","Option2", "Option3", "Option4");
-var questionFour = new QuestionMaker("Who finished second to Jose Fernandez in 2013 National League Rookie of the Year voting?","Yasiel Puig, Dodgers","Option2", "Option3", "Option4");
-var questionFive = new QuestionMaker("Against what opposing team did Babe Ruth hit his first career home run?", "New York Yankees","Option2", "Option3", "Option4");
-var questionSix = new QuestionMaker("Who was the first Major League player to pitch a ball over 100 mph?", "Nolan Ryan","Option2", "Option3", "Option4");
-var questionSeven = new QuestionMaker("What Baltimore Orioles manager was ejected from a record 91 games?", "Earl Weaver","Option2", "Option3", "Option4");
-var questionEight = new QuestionMaker("What player hit 70 home runs in 1998?", "Mark McGwire","Option2", "Option3", "Option4");
+var questionOne = new QuestionMaker("Who is the last player before Javier Baez to homer in a 1-0 postseason game is playing in the ALDS this year, but not for the same team.", "Mike Napoli", "Bernie Sanders", "Ryne Sandberg", "Michael Johnson")
+var questionTwo = new QuestionMaker("Who led the 2007 Red Sox in wins, with 20?", "Josh Beckett", "James Traver", "Ty Cobb", "James Haff")
+var questionThree = new QuestionMaker("Who was the last player to reach 1,000 career hits in a Giants uniform before Buster Posey?","Rich Aurilia","Jackie Robinson", "Ted Williams", "Lou Gehrig");
+var questionFour = new QuestionMaker("Who finished second to Jose Fernandez in 2013 National League Rookie of the Year voting?","Yasiel Puig, Dodgers","Mickey Mantle", "Yogi Berra", "Pete Rose");
+var questionFive = new QuestionMaker("Against what opposing team did Babe Ruth hit his first career home run?", "New York Yankees","Red Sox", "Chicago Cubs", "St.Louis Cardinals");
+var questionSix = new QuestionMaker("Who was the first Major League player to pitch a ball over 100 mph?", "Nolan Ryan","Ryne Sandberg", "Ty Cobb", "Reggie Jackson");
+var questionSeven = new QuestionMaker("What Baltimore Orioles manager was ejected from a record 91 games?", "Earl Weaver","Jim Travis", "Nolan Ryan", "Barry Bonds");
+var questionEight = new QuestionMaker("What player hit 70 home runs in 1998?", "Mark McGwire","Ryne Sandberg", "Ty Cobb", "Reggie Jackson");
 var questionNine = new QuestionMaker("Who beat out Ted Williams for the American League's Most Valuable Player award in 1941, when Williams hit for a .406 average?",
-    "Joe DiMaggio","Option2", "Option3", "Option4");
-var questionTen = new QuestionMaker("Who hit the ball that rolled between Bill Buckner's legs in the 1986 World Series?", "Mookie Wilson","Option2", "Option3", "Option4");
+    "Joe DiMaggio","Babe Ruth", "Willie Mays", "Hank Aaron");
+var questionTen = new QuestionMaker("Who hit the ball that rolled between Bill Buckner's legs in the 1986 World Series?", "Mookie Wilson","Ryne Sandberg", "Ty Cobb", "Reggie Jackson");
 
 questionsArr.push(questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen); // add all
 
@@ -145,15 +145,15 @@ window.onload = function(event) {
 
     buildAnswerOption(questionOne);
 
-    // function timer(){
-    //     count=count-1;
-    //     if (count < 0)
-    //     {
-    //         clearInterval(counter);
-    //         return;
-    //     }
-    //     document.getElementById("timer").innerHTML = count + " secs";
-    // };
+    function timer(){
+        count=count-1;
+        if (count < 0)
+        {
+            clearInterval(counter);
+            return;
+        }
+        document.getElementById("timer").innerHTML = count + " secs";
+    };
 
 
     submitButton.onclick = function ifCorrect() {
@@ -208,6 +208,24 @@ function runCalc(runs){
     else if(runs === 4){
         return 'images/home-run.jpg'
     }
+    else if(runs === 5){
+        return 'images/first-base.jpg'
+    }
+    else if(runs === 6){
+        return 'images/second-base.jpg'
+    }
+    else if(runs === 7){
+        return 'images/third-base.jpg'
+    }
+    else if(runs === 8){
+        return 'images/home-run.jpg'
+    }
+    else if(runs === 9){
+        return 'images/first-base.jpg'
+    }
+    // else if(runs === 10){
+    //     return 'images/first-base.jpg'
+    // }
     else {
         console.log('nothing hit')
     }
@@ -218,6 +236,15 @@ function checkGameOver(){
         window.location.replace("exit.html");
     }
 }
+
+function checkGameOver(){
+    if(runsCounter === 9){
+        window.location.replace("win.html");
+    }
+}
+
+
+
 
 
 // nextQuestion.onclick = function nextQuestion() {
@@ -242,10 +269,3 @@ nextQuestion.onclick = function nextQuestion() {
 }
 
 
-//
-// //=========JAMES CODE==========
-// function nextQuestion() {
-//     var ques = questionsArr[questionCounter];
-//     // call function to build question
-//     questionCounter = questionCounter + 1;
-// }
