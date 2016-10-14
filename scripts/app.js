@@ -223,9 +223,10 @@ function runCalc(runs){
     else if(runs === 9){
         return 'images/first-base.jpg'
     }
-    // else if(runs === 10){
-    //     return 'images/first-base.jpg'
-    // }
+    else if(runs === 10){
+        //return 'images/first-base.jpg'
+        window.location.replace("win.html");
+    }
     else {
         console.log('nothing hit')
     }
@@ -236,12 +237,12 @@ function checkGameOver(){
         window.location.replace("exit.html");
     }
 }
-
-function checkGameWon(){
-    if(runsCounter === 9){
-        window.location.replace("win.html");
-    }
-}
+//
+// function checkGameWon(){
+//     if(runsCounter === 9){
+//         window.location.replace("win.html");
+//     }
+// }
 
 
 
