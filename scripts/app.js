@@ -237,7 +237,7 @@ function checkGameOver(){
     }
 }
 
-function checkGameOver(){
+function checkGameWon(){
     if(runsCounter === 9){
         window.location.replace("win.html");
     }
